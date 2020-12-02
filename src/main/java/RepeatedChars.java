@@ -2,6 +2,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * функция, которая на вход принимает строку, а на выходе выдаёт массив всех повторяющихся символов
+ */
 public class RepeatedChars {
     public char[] getRepeatedChars(String string) throws WrongInputException {
 

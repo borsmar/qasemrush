@@ -2,19 +2,24 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
 
 public class Tests {
     RepeatedChars repeatedChars = new RepeatedChars();
 
+    /**
+     * проверка работы функции при вводе строки с повторяюшимися символами
+     */
     @Test
-    public void checkIfFunctionWorksProperlyWithCorrectInput(){
+    public void checkIfFunctionWorksProperlyWithCorrectInput() {
         String s = "aaascaapp1124df4==";
         assertEquals("14=ap", new String(repeatedChars.getRepeatedChars(s)));
     }
 
+    /**
+     * проверка работы функции при вводе строки в один символ
+     */
     @Test
-    public void checkWhatIfSizeOfStringIs1() throws WrongInputException{
+    public void checkWhatIfSizeOfStringIs1() throws WrongInputException {
         String s = "a";
 
         try {
@@ -26,8 +31,11 @@ public class Tests {
 
     }
 
+    /**
+     * проверка работы функции при вводе строки в ноль символов
+     */
     @Test
-    public void checkWhatIfSizeOfStringIs0() throws WrongInputException{
+    public void checkWhatIfSizeOfStringIs0() throws WrongInputException {
         String s = "";
 
         try {
@@ -39,8 +47,11 @@ public class Tests {
 
     }
 
+    /**
+     * проверка работы функции при вводе строки без повторяющихся символов
+     */
     @Test
-    public void checkIfCharsDontRepeat() throws WrongInputException{
+    public void checkIfCharsDontRepeat() throws WrongInputException {
         String s = "abcdefg";
 
         try {
